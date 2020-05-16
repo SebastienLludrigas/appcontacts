@@ -7,37 +7,45 @@ export default class Liste extends Component {
       contacts: [
          {
             id: 1,
-            nom: 'John Doe',
+            nom: 'Tom Cruise',
             email: 'john@gmail.com',
             tel: "555-555-5555"
          },
          {
             id: 2,
-            nom: 'John Doe',
+            nom: 'Sean Connery',
             email: 'john@gmail.com',
             tel: "555-555-5555"
          },
          {
             id: 3,
-            nom: 'John Doe',
+            nom: 'Christopher Nolan',
             email: 'john@gmail.com',
             tel: "555-555-5555"
          }
       ]
    }
 
+   supprime = (id) => {
+      const nvContacts = this.state.contacts.filter(contact => contact.id !== id)
+      this.setState({
+         contacts: nvContacts
+      })
+   }
+
    render() {
       return (
-         <div>
+         <React.Fragment>
             {this.state.contacts.map(contact => (
                <Contact
                key={contact.id}
                nom={contact.nom}
                email={contact.email}
                tel={contact.tel}
+               supprimeClick={() => this.supprime(contact.id)}
                />
             ))}
-         </div>
+         </React.Fragment>
       )
    }
 }
