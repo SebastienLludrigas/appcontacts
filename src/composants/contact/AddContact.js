@@ -28,6 +28,8 @@ export default class AddContact extends Component {
          email: '',
          tel: ''
       })
+
+      this.props.history.push('/')
    }
 
    render() {
