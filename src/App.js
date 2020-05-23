@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
-import Titre from './Titre';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './composants/Header'
+import Liste from './composants/Liste'
 
 class App extends Component {
-
-  state = {
-    nom: 'Sebastien'
-  }
 
   render() {
 
     return (
       <div className="App">
-        <Titre nom={this.state.nom}>
-        </Titre>
+        <Header/>
+        <div className="container">
+          <Liste/>
+        </div>
       </div>
     );
   }
