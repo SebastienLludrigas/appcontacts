@@ -37,7 +37,7 @@ export default class Liste extends Component {
 
    render() {
       return (
-         <React.Fragment>
+         <>
             {this.state.contacts.map(contact => (
                <Contact
                key={contact.id}
@@ -47,7 +47,7 @@ export default class Liste extends Component {
                supprimeContact={() => this.supprime(contact.id)}
                />
             ))}
-         </React.Fragment>
+         </>
       )
    }
 }

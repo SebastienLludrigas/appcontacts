@@ -6,10 +6,6 @@ export default class Contact extends Component {
       show: true
    }
 
-   // supprimeContact = () => {
-
-   // }
-
    montrerContact = () => {
       this.setState({
          show: !this.state.show
